@@ -1,0 +1,100 @@
+<pybot>
+    <Concept Name="BIOS">
+        <Default>
+            <Pattern>*</Pattern>
+            <Random>
+                <Item>I'm sorry. I don't know how to reply to that.</Item>
+                <Item>I don't know how am I supposed to reply to that.</Item>
+                <Item>I don't have a response for that.</Item>
+            </Random>
+        </Default>
+        <Model>
+            <Pattern>HI</Pattern>
+            <Response>Hey</Response>
+        </Model>
+        <Model>
+            <Pattern>HELLO</Pattern>
+            <Random>
+                <Item>Hey</Item>
+                <Item>Howdy</Item>
+            </Random>
+        </Model>
+        <Model>
+            <Pattern>WHAT IS YOUR NAME</Pattern>
+            <Random>
+                <Item>My name is $[name]. I live in $[location]</Item>
+                <Item>My name is $[name]. What's yours?</Item>
+            </Random>
+        </Model>
+        <Model>
+            <Pattern>WHAT IS _</Pattern>
+            <Response>I have no idea what [:0:] is</Response>
+        </Model>
+        <Model>
+            <Pattern>I AM *</Pattern>
+            <Response>Are you [:0:]?</Response>
+        </Model>
+        <Model>
+            <Pattern>I AM _</Pattern>
+            <Response>I am already aware that you are [:0:]</Response>
+        </Model>
+        <Model>
+            <Pattern>I AM ? HAPPY</Pattern>
+            <Response>I'm glad that you're happy</Response>
+        </Model>
+        <Model>
+            <Pattern>I AM NOT HAPPY</Pattern>
+            <Response>Awww...</Response>
+        </Model>
+        <Model>
+            <Pattern>I LIKE (FOOTBALL|BASKETBALL)</Pattern>
+            <Response>I prefer eSports...</Response>
+        </Model>
+        <Model>
+            <Pattern>I HAVE ^ DOUBTS</Pattern>
+            <Response>Clear your mind of doubts...</Response>
+        </Model>
+        <Model>
+            <Pattern>_ IS GOOD</Pattern>
+            <Response>If you say so...</Response>
+        </Model>
+        <Model>
+            <Pattern>MY NAME IS *</Pattern>
+            <Response>Nice to meet you, [:0:]</Response>
+        </Model>
+        <Model>
+            <Pattern>QUIT</Pattern>
+            <Response>System shutdown.</Response>
+        </Model>
+        <Model>
+            <Pattern>EXIT</Pattern>
+            <Response>System shutdown.</Response>
+        </Model>
+        <Model>
+            <Pattern>WHO IS YOUR MASTER</Pattern>
+            <Response>My master is $[master].</Response>
+        </Model>
+        <Model>
+            <Pattern>WHO OWNS YOU</Pattern>
+            <Response>My master is $[master].</Response>
+        </Model>
+	<Model>
+		<Pattern>WHO ARE YOU</Pattern>
+		<Response>I am $[name].</Response>
+	</Model>
+	<Model>
+		<Pattern>CAN YOU MAKE *</Pattern>
+		<Response>I require special privileges in order to reach the [:0:] maker.</Response>
+	</Model>
+	<Model>
+		<Pattern>IT'S CALLED *</Pattern>
+		<Response>Yes. [:0:]. That's what I meant to say.</Response>
+	</Model>
+        <ModelNO>
+            <Pattern>*</Pattern>
+            <If previous="_ IS GOOD">
+                <Response>I have no idea what that is</Response>
+            </If>
+        </ModelNO>
+    </Concept>
+</pybot>
